@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     name: my build
     steps:
+     - name: Discord Message
+       uses: discord-actions/message@v2
+       with:
+         webhookUrl: https://discord.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
+         message: "hello whoami"    
+
       # - name: Check out code
       #   uses: actions/checkout@v2
       # - name: Setup Go
@@ -34,9 +40,3 @@ jobs:
       #     ls
       #     cd hiddenFolder
       #     ls
-
-      - name: Discord Message
-      - uses: discord-actions/message@v2
-        with:
-          webhookUrl: https://discord.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
-          message: "hello whoami"    
