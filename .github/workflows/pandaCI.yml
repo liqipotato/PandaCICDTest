@@ -9,14 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     name: my build
     steps:
-     # - name: Discord Message
-     #   uses: discord-actions/message@v2
-     #   with:
-     #     webhookUrl: https://discord.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
-     #     message: "hello liqi is here" 
-
       - name: Check out code
         uses: actions/checkout@v2
+        
       - name: Setup Go
         uses: actions/setup-go@v5.2.0
         with: 
