@@ -22,16 +22,22 @@ jobs:
           ls
           go test -cover
 
-      - name: Checkout private repo remotely
-        uses: actions/checkout@v4
-        with:
-          repository: liqipotato/PandaCICDHiddenTest
-          path: hiddenFolder
-          token: ${{ secrets.PANDACITEST }}
+      # - name: Checkout private repo remotely
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: liqipotato/PandaCICDHiddenTest
+      #     path: hiddenFolder
+      #     token: ${{ secrets.PANDACITEST }}
 
-      - name: List out hidden things
-        run: |
-          ls
-          cd hiddenFolder
-          ls
+      # - name: List out hidden things
+      #   run: |
+      #     ls
+      #     cd hiddenFolder
+      #     ls
+
+      - name: Send Discord Message
+      - uses: discord-actions/message@v2
+        with:
+          webhookUrl: "https://discord.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5"
+          message: "hello whoami"          
           
